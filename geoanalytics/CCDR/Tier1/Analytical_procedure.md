@@ -1,8 +1,11 @@
 # OBJECTIVE
 
-The script performs combination of hazard and exposure geodata from global datasets according to user input and settings.
-First runs at the grid level, then aggregates the output ad ADM3 boundary level.
-Returns output as table and statistics and exports it in excel format and geopackage.
+The script performs combination of hazard and exposure geodata from global datasets according to user input and settings, and returns a risk score in the form of Expected Annual Impact (EAI).
+The spatial information about hazard and exposure is first collected at the grid level, the output is then aggregated at ADM2 boundary level to combine Vulnerability scores and calculate risk estimate. This represents the disaster risk historical baseline.
+The climate component estimates the increase in the disaster risk score over the baseline by evaluating the anomaly (standard deviation) of hazard-related climate indices for the required future time horizon over the reference period.
+
+The output is exported in form of tables, statistics, charts (excel format) and maps (geopackage).
+
 
 # SCRIPT OVERVIEW
 
@@ -83,7 +86,7 @@ Optional:
 
 - For each ADM2:
   - Calculate impact for each RP (RPx_impact)
-  - Calculate EAI from all RP_impact
+  - Calculate EAI from all RPx_impact
 
 - Aggregate ADM2 values to ADM1 and ADM0 according to criteria
 
@@ -91,7 +94,7 @@ Optional:
 ## PREVIEW RESULTS
 
 - Plot map of ADM2/ADM1/ADM0
-- Plot tables/CHarts
+- Plot tables/Charts
 
 ## EXPORT RESULTS
 
