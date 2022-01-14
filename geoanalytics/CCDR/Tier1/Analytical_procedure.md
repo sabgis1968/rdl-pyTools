@@ -33,6 +33,10 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 - PREVIEW RESULTS: plot tables and maps
 - EXPORT RESULTS: results are exported as excel according to template
 
+# PRE-REQUISITES (OFFLINE)
+
+- Anaconda and python installed
+
 
 # SCRIPT STEP-BY-STEP
 
