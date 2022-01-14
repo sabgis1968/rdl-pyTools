@@ -57,6 +57,8 @@ Optional:
 - Min Hazard threshold: data below this threshold are being ignored
 - Max Hazard threshod: data above this threshold are considered as the threshold value (max expected impact)
 
+------------------------------------------
+
 ## DATA MANAGEMENT - BASELINE
 
 - Load country boundaries from ADM_012.gpkg (world boundaries at 3 levels). Includes ISO3 code related to country name.
