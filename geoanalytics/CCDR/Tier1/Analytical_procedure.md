@@ -35,7 +35,7 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 # PRE-REQUISITES (OFFLINE)
 
-- Anaconda and python installed
+- Anaconda and python installed > NOT IF if we use jupyter desktop! Autoinstaller!
 
 
 # SCRIPT STEP-BY-STEP
@@ -67,6 +67,8 @@ Optional:
 
 - Load country boundaries from ADM_012.gpkg (world boundaries at 3 levels). Includes ISO3 code related to country name.
 	- The whole gpkg is 1.5 Gb, for now I have a SAR-only version loaded. Would be good to have a way to get only the required ISO from main gpkg.
+	- Alternatively, we could API-request ADM via https://www.geoboundaries.org/api.html, however the quality of the layers is mixed!
+          Some mismatch among different levels boundaries, different years update, etc.
 
 - Load population from WorldPop API according to ISO3 code:
 
