@@ -61,6 +61,21 @@ Optional:
 - Min Hazard threshold: data below this threshold are being ignored
 - Max Hazard threshod: data above this threshold are considered as the threshold value (max expected impact)
 
+## SUMMARY OUTPUT SETTINGS
+
+- Display input and settings, preview classes intervals as table:
+
+Output classes:
+
+ | min | Max | 
+ |-----|---|
+ | 0.5 | 1 |
+ | 1 | 1.5 |
+ | 1.5 | 2 |
+ | 2 | 2.5 !
+ | 2.5 | 3 |
+ | 3 | inf |
+
 ------------------------------------------
 
 ## DATA MANAGEMENT - BASELINE
