@@ -95,7 +95,7 @@ Optional:
 
     returns a Json that includes the url of data:
 
-	https://data.worldpop.org/GIS/Population/Global_2000_2020/2001/NPL/npl_ppp_2020.tif
+	https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/NPL/npl_ppp_2020.tif
 	
     This is a 100m grid representing the total popuation estimated in each cell.
 
