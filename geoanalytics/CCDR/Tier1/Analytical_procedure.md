@@ -104,24 +104,25 @@ Optional:
 
 ## DATA PROCESSING - BASELINE
 
-- For each hazard RP:
-  - Apply hazard min and max thresholds and classify hazard values in classes according to settings
-  - Perform zonal statistic (SUM) for each hazard class (3 to 10) over exposure grid
+- LOOP over all hazard RPs:
 
-- Output table: [RP;hazard_class;population]
+  - Classify hazard layer according to settings: min and max thresholds, number of classes -> RPi_classes (multiband raster)
+  - Each class of RP is used to mask the population layer -> RPi_class_pop (multiband raster)
+  - Perform zonal statistic (SUM) for each ADM2 unit over RPi_class_pop -> table (ADM2_NAME;RPi_C1_p;RPi_C2_p;...RPi_Ci_p)
+  - Calculate RPi_C1_p * V-factor (previously embedded in ADM2 layer) -> table (ADM2_NAME;RPi_C1_p_impact;RPi_C2_p_impact;...RPi_Ci_p_impact)
+  - Sum all RPi_Ci_p_impact columns for each ADM2 row -> table [ADM2;RP100_tot_p_impact]
 
-- Aggregate at ADM2 level according to criteria (Max or Mean)
+- END LOOP; all RPs combined -> table [ADM2;RP10_impact;RP100_impact_RP1000_impact]
 
-- For each ADM2:
-  - Calculate impact for each RP (RPx_impact)
-  - Calculate EAI from all RPx_impact
+- Multiply RPi_impact by RP_P (1-EXP(-1/RP)) -> table [ADM2;RP10_EAI;RP100_EAI;RP1000_EAI]
 
-- Aggregate ADM2 values to ADM1 and ADM0 according to criteria
+- Sum all RPi_EAI columns for each ADM2: table [ADM2;Pop_EAI]
 
+- Aggregate at ADM1 level according to criteria (Max or Mean)
 
 ## PREVIEW RESULTS - BASELINE
 
-- Plot map of ADM2/ADM1/ADM0
+- Plot map of ADM2/ADM1
 - Plot tables/Charts
 
 ## EXPORT RESULTS - BASELINE
