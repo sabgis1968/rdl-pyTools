@@ -65,19 +65,19 @@ Optional:
 
 - Display input and settings, preview classes intervals as table:
 
-Country: Nepal (NPL)
-Exposure: Population
-Values aggregation criteria: Max
-Output classes:
+	- Country: Nepal (NPL)
+	- Exposure: Population
+	- Values aggregation criteria: Max
+	- Output classes:
 
- | min | Max | 
- |-----|---|
- | 0.5 | 1 |
- | 1 | 1.5 |
- | 1.5 | 2 |
- | 2 | 2.5 |
- | 2.5 | 3 |
- | 3 | inf |
+		 | min | Max | 
+		 |-----|---|
+		 | 0.5 | 1 |
+		 | 1 | 1.5 |
+		 | 1.5 | 2 |
+		 | 2 | 2.5 |
+		 | 2.5 | 3 |
+		 | 3 | inf |
 
 
 ------------------------------------------
