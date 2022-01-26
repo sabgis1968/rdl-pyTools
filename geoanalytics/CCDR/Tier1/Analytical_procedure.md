@@ -86,22 +86,21 @@ Optional:
 	
     This is a 100m grid representing the total popuation estimated in each cell.
 
-- Load hazard data from drive (for prototype). Most hazard data consist of 3 raster layers, each representing one event frequency (return period).
+- Load hazard data from drive (for prototype). Most hazard data consist of 3 raster layers, each representing one event frequency scenario (return period).
 
-- Plot data ADM and Pop data
+- Plot ADM and Pop data as map [if easy]
 
 ## DATA PROCESSING - BASELINE
 
 - LOOP over all hazard RP layers:
-- 
-  - Filter hazard layer according to settings (min and max thresholds) -> RPi
+  - Filter hazard layer according to settings (min and max thresholds) -> RP
   - Transform hazard intensity value into impact factor using specific hazard impact function or table -> RPi
   - RPi is multiplied as mask with the population layer -> RPi_pop
   - Perform zonal statistic (SUM) for each ADM2 unit over RPi_pop -> table (ADM2_NAME;RPi_pop)
 
-- END LOOP; all RPs combined -> table [ADM2;RP10_impact;RP100_impact_RP1000_impact]
+- END LOOP; all RPs combined -> table [ADM2;RP10i;RP100i;RP1000i]
 
-- Multiply RPi_impact by RP_P (1-EXP(-1/RP)) -> table [ADM2;RP10_EAI;RP100_EAI;RP1000_EAI]
+- Multiply RPi by RPp = (1-EXP(-1/RP)) -> table [ADM2;RP10_EAI;RP100_EAI;RP1000_EAI]
 
 - Sum all RPi_EAI columns for each ADM2: table [ADM2;Pop_EAI]
 
