@@ -35,15 +35,14 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 # PRE-REQUISITES (OFFLINE)
 
-- Anaconda and python installed > NOT IF if we use jupyter desktop! Autoinstaller!
-
+- Anaconda and python installed > Possibly we move to jupyter desktop Autoinstaller
+- Create environment from ccdr_analytics.yml
 
 # SCRIPT STEP-BY-STEP
 
 ## SETUP
 
 - Load required libraries
-- Load HazardStats script (zonal statistics)
 
 ## USER INPUT
 
@@ -51,34 +50,22 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 - Exposure category (1): a) population; b) land cover 
 
 Optional:
-- Future time horizon: 2050, 2080 
+- Time horizon: Historical, 2050, 2080 
 - RCP scenario: RCP 2.6, 4.5, 6.5, 8.5 
 
 ## SETTINGS (DEFAULTS can be changed)
 
 - Criteria for aggregation: a) MAX; b) Mean
-- Number of classes: 5 (3 to 10)
 - Min Hazard threshold: data below this threshold are being ignored
 - Max Hazard threshod: data above this threshold are considered as the threshold value (max expected impact)
 
 ## SUMMARY OUTPUT SETTINGS
 
-- Display input and settings, preview classes intervals as table:
+- Display input and settings:
 
 	- Country: Nepal (NPL)
 	- Exposure: Population
 	- Values aggregation criteria: Max
-	- Output classes:
-
-		 | min | Max | 
-		 |-----|---|
-		 | 0.5 | 1 |
-		 | 1 | 1.5 |
-		 | 1.5 | 2 |
-		 | 2 | 2.5 |
-		 | 2.5 | 3 |
-		 | 3 | inf |
-
 
 ------------------------------------------
 
@@ -99,18 +86,18 @@ Optional:
 	
     This is a 100m grid representing the total popuation estimated in each cell.
 
-- Load hazard data from drive (for prototype). Most hazard data consist of 3 grids, each representing one event frequency (return period).
+- Load hazard data from drive (for prototype). Most hazard data consist of 3 raster layers, each representing one event frequency (return period).
 
+- Plot data ADM and Pop data
 
 ## DATA PROCESSING - BASELINE
 
-- LOOP over all hazard RPs:
-
-  - Classify hazard layer according to settings: min and max thresholds, number of classes -> RPi_classes (multiband raster)
-  - Each class of RP is used to mask the population layer -> RPi_class_pop (multiband raster)
-  - Perform zonal statistic (SUM) for each ADM2 unit over RPi_class_pop -> table (ADM2_NAME;RPi_C1_p;RPi_C2_p;...RPi_Ci_p)
-  - Calculate RPi_C1_p * V-factor (previously embedded in ADM2 layer) -> table (ADM2_NAME;RPi_C1_p_impact;RPi_C2_p_impact;...RPi_Ci_p_impact)
-  - Sum all RPi_Ci_p_impact columns for each ADM2 row -> table [ADM2;RP100_tot_p_impact]
+- LOOP over all hazard RP layers:
+- 
+  - Filter hazard layer according to settings (min and max thresholds) -> RPi
+  - Transform hazard intensity value into impact factor using specific hazard impact function or table -> RPi
+  - RPi is multiplied as mask with the population layer -> RPi_pop
+  - Perform zonal statistic (SUM) for each ADM2 unit over RPi_pop -> table (ADM2_NAME;RPi_pop)
 
 - END LOOP; all RPs combined -> table [ADM2;RP10_impact;RP100_impact_RP1000_impact]
 
