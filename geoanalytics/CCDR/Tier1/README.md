@@ -59,7 +59,10 @@ FUTURE RISK:
   
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
 
-If the hazard is represented by one layer, it is assumed to represent the annual impact.
-Otherwise, this procedure is repeated for each of RP layers, and the Expected Annua Impact is computed in the following steps.
+If the hazard is represented by **one layer**, it is assumed to represent the annual impact.
+
+Otherwise, this procedure is repeated for **each RP layer**, and the Expected Annua Impact is computed in the following steps.
+
+- Once reapeted over all RP layers, the ADM3 layer used to perform zonal statistic will have all the required information to calculate EAI.
 
 ### USING IMPACT CATEGORIES CLASSIFICATION
