@@ -29,14 +29,9 @@ FUTURE RISK:
 
     <img width=50% src="https://user-images.githubusercontent.com/44863827/151363110-aef5a83b-d43b-44be-8d81-964133e210e4.png">
 
-
 <table><tr><td>Original data:</td><td>Threshold applied:</td></tr>
 <tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381859-c0b1c778-dd2a-455b-ad36-6077398bd037.png"></td>
 <td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381718-74f346ea-8e17-41ae-a055-d683c9e4403e.png"></td></tr></table>
-
-![immagine](https://user-images.githubusercontent.com/
-
-Note: this computation may take between 1-2 min.
 
 ### USING A IMPACT CURVE / FUNCTION
 
@@ -45,7 +40,6 @@ Note: this computation may take between 1-2 min.
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png">
 
   The resulting impact factor layers has values ranging 0-1.
-  Note: this computation may take between 1-2 min. 
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
 
