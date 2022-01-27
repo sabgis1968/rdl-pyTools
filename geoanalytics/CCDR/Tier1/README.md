@@ -22,7 +22,7 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 - Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc).
   In this example, we use FATHOM river flood data (light blue) and WorldPop2020-constrained-US_adjusted population data (green to purple).
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151356823-3687e507-1408-411b-ae8a-2b6c5a1259b3.png">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151433893-76299364-f416-487f-a3e1-acf082d8b137.png">
 
 - (optional) assign symbology for each one to print out readable maps. Consider min and max hazard thresholds and classes when building symbology.
 
