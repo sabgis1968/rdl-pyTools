@@ -68,11 +68,16 @@ If the hazard is represented by **one layer**, it is assumed to represent the Ex
 
 Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is computed as described in the following steps.
 
-- Once reapeted over all RP layers, the ADM3 layer used to perform zonal statistic will have all the required information to calculate EAI.
+- Once reapeted over all RP layers, the ADM3 layer used to perform zonal statistic will include all the required information to calculate EAI and EAI%.
 
 - The impact for each column is multiplied by the year frequency of the return period (RPf), calculated as RPf = 1/RP or, in the case where the set includes RP 1 year, as:
-    RPf = 1 - EXP(-1/RP)
-    
+    RPf = 1 - EXP(-1/RP). Then, the column are summed up to a total, representing EAI.
+- Create a new column and calculate the percentage of expected annually impacted people over total population.
+
+- Create sum columns for ADM2 and ADM1.
 - 
+- Plot results.
+
+-------------------------------
 
 ### USING IMPACT CATEGORIES CLASSIFICATION
