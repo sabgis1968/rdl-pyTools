@@ -3,8 +3,6 @@
 The script performs combination of hazard and exposure geodata from global datasets according to user input and settings, and returns a risk score in the form of Expected Annual Impact (EAI) for baseline (reference period). 
 The spatial information about hazard and exposure is first collected at the grid level, the output is then aggregated at ADM2 boundary level to combine Vulnerability scores and calculate risk estimate. This represents the disaster risk historical baseline.
 
-The climate component estimates the increase in the disaster risk score over the baseline by evaluating the anomaly (standard deviation) of hazard-related climate indices for the required future time horizon over the reference period.
-
 The output is exported in form of tables, statistics, charts (excel format) and maps (geopackage).
 
 
@@ -49,10 +47,6 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 - Country of interest (1): Name or ISO code 
 - Exposure category (1): a) population; b) land cover 
 
-Optional:
-- Time horizon: Historical, 2050, 2080 
-- RCP scenario: RCP 2.6, 4.5, 6.5, 8.5 
-
 ## SETTINGS (DEFAULTS can be changed)
 
 - Criteria for aggregation: a) MAX; b) Mean
@@ -69,7 +63,7 @@ Optional:
 
 ------------------------------------------
 
-## DATA MANAGEMENT - BASELINE
+## DATA MANAGEMENT
 
 - Load country boundaries from ADM_012.gpkg (world boundaries at 3 levels). Includes ISO3 code related to country name.
 	- The whole gpkg is 1.5 Gb, for now I have a SAR-only version loaded. Would be good to have a way to get only the required ISO from main gpkg.
@@ -90,7 +84,7 @@ Optional:
 
 - Plot ADM and Pop data as map [if easy]
 
-## DATA PROCESSING - BASELINE
+## DATA PROCESSING
 
 - LOOP over all hazard RP layers:
   - Filter hazard layer according to settings (min and max thresholds) -> RP
@@ -115,22 +109,3 @@ Optional:
 
 - Export tables and charts as excel
 - Export ADM2/ADM1/ADM0 with joined values as gpkg
-
-------------------------------------------
-
-## DATA MANAGEMENT - PROJECTIONS
-
-- Creation of API request based on selected country and scenario options (period, RCP)
-- Harvest climate indices information as tables of SD
-
-## DATA PROCESSING - PROJECTIONS
-
-- Apply rule to change risk level based on SD
-
-## PREVIEW RESULTS - PROJECTIONS
-
-- Plot indices tables/charts
-
-## EXPORT RESULTS - PROJECTIONS
-
-- Export tables and charts as excel
