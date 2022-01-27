@@ -82,8 +82,9 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 - Plot results.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151419095-5801dd18-03aa-40a3-aab3-17ca7fe686f3.png">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png">
 
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
 
 -------------------------------
 
