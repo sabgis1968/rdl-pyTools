@@ -53,7 +53,8 @@ FUTURE RISK:
 
 - Zonal statistic: sum up impacted population at ADM3 level.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151382721-2764d686-69df-4584-9fcd-2fc2f23ea120.png">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151384000-0a71e054-49a8-414b-bf3e-77432b135543.png">
 
+Repeat for all RP layers.
 
 ### USING IMPACT CATEGORIES CLASSIFICATION
