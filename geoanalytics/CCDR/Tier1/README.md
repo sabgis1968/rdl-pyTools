@@ -13,6 +13,8 @@ FUTURE RISK:
 
 --------------------------------------
 
-## EXAMPLE BASELINE RISK OUTPUT
+## EQUIVALENT PROCESSING IN QGIS
 
+- Load ADM units (3 levels), hazard and exposure layers
+- 
 
