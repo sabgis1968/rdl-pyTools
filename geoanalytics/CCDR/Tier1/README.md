@@ -78,13 +78,14 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
     RPf = 1 - EXP(-1/RP). Then, the column are summed up to a total, representing EAI.
 - Create a new column and calculate the percentage of expected annually impacted people over total population.
 
-- Create sum columns for ADM2 and ADM1.
-
 - Plot results.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png">
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
+    
+- Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI for the same ADM2 and ADM1 code.
+
 
 -------------------------------
 
