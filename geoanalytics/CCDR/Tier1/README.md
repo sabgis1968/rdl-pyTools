@@ -51,11 +51,11 @@ FUTURE RISK:
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151381319-6a9b3fe9-f7f2-4dcd-b497-91bfcaac1c03.png">
 
-- Zonal statistic: sum up impacted population at ADM3 level.
+- Zonal statistic: select "sum" criteria to aggregate impacted population at ADM3 level.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151384000-0a71e054-49a8-414b-bf3e-77432b135543.png">
   
-  A new column is added to ADM3 layer: plot it to desired simbology.
+  A new column "RP10_pop_sum" is added to ADM3 layer: plot it to desired simbology.
   
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
 
