@@ -17,7 +17,7 @@ FUTURE RISK:
 
 ### DATA MANAGEMENT
 
-- Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc). In this example, we use FATHOM river flood data.
+- Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc). In this example, we use FATHOM river flood data (light blue) and population data (blue to red).
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151356823-3687e507-1408-411b-ae8a-2b6c5a1259b3.png">
 
