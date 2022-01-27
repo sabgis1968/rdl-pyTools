@@ -104,12 +104,12 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 - Aggregate at ADM1 level according to criteria (Max or Mean)
 
-## PREVIEW RESULTS - BASELINE
+## PREVIEW RESULTS
 
 - Plot map of ADM2/ADM1
 - Plot tables/Charts
 
-## EXPORT RESULTS - BASELINE
+## EXPORT RESULTS
 
 - Export tables and charts as excel
 - Export ADM2/ADM1/ADM0 with joined values as gpkg
