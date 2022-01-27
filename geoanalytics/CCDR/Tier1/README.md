@@ -15,6 +15,8 @@ FUTURE RISK:
 
 ## EQUIVALENT PROCESSING IN QGIS
 
+Estimated time to complete the assessment on one country: less than 2 hours.
+
 ### DATA MANAGEMENT
 
 - Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc).
