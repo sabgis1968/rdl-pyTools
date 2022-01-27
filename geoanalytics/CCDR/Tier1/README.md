@@ -40,9 +40,12 @@ Note: this computation may take between 1-2 min.
 
 - Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map. In this example, the average flood damage curve for Asia is used, where x is the hazard metric (water depth): y= 0.00723*x^3 - 0.1*x^2 + 0.506*x + 0.023
 
-    <img width=50% src="https://user-images.githubusercontent.com/44863827/151366185-020c0fb4-e506-48f7-ae2b-97f81e5d44d5.png">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151366185-020c0fb4-e506-48f7-ae2b-97f81e5d44d5.png">
 
-Note: this computation may take between 1-2 min.
+Note: this computation may take between 1-2 min. The resulting layers has values ranging 0-1.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151367325-4d5eacef-f612-486c-803f-05d7d20c0244.png)
+
 
 - Raster calculator: multiply the impact factor map with the exposure map
 
