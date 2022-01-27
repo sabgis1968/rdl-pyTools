@@ -94,7 +94,7 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 - END LOOP; all RPs combined -> table [ADM2;RP10i_pop;RP100i_pop;RP1000i_pop]
 
-- Multiply RPi by RPp = (1-EXP(-1/RP)) -> table [ADM2;RP10_EAI;RP100_EAI;RP1000_EAI]
+- Multiply RPi by RP frequency, RPf = 1/RP (or RPf = 1-EXP(-1/RP) if RP = 1) -> table [ADM2;RP10_EAI;RP100_EAI;RP1000_EAI]
 
 - Sum all RPi_EAI columns for each ADM2: table [ADM2;Pop_EAI]
 
