@@ -72,13 +72,18 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 - Once reapeted over all RP layers, the ADM3 layer used to perform zonal statistic will include all the required information to calculate EAI and EAI%.
 
-- The impact for each column is multiplied by the year frequency of the return period (RPf), calculated as RPf = 1/RP or, in the case where the set includes RP 1 year, as:
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151416889-8adafa0c-584b-4505-8185-6ee46c7f1bfe.png">
+  
+  - The impact for each column is multiplied by the year frequency of the return period (RPf), calculated as RPf = 1/RP or, in the case where the set includes RP 1 year, as:
     RPf = 1 - EXP(-1/RP). Then, the column are summed up to a total, representing EAI.
 - Create a new column and calculate the percentage of expected annually impacted people over total population.
 
 - Create sum columns for ADM2 and ADM1.
 
 - Plot results.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151419095-5801dd18-03aa-40a3-aab3-17ca7fe686f3.png">
+
 
 -------------------------------
 
