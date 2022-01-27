@@ -54,7 +54,12 @@ FUTURE RISK:
 - Zonal statistic: sum up impacted population at ADM3 level.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151384000-0a71e054-49a8-414b-bf3e-77432b135543.png">
+  
+  A new column is added to ADM3 layer: plot it to desired simbology.
+  
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
 
-Repeat for all RP layers.
+If the hazard is represented by one layer, it is assumed to represent the annual impact.
+Otherwise, this procedure is repeated for each of RP layers, and the Expected Annua Impact is computed in the following steps.
 
 ### USING IMPACT CATEGORIES CLASSIFICATION
