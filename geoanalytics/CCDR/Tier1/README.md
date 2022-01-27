@@ -44,7 +44,7 @@ Note: this computation may take between 1-2 min.
 
 Note: this computation may take between 1-2 min. The resulting layers has values ranging 0-1.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151367325-4d5eacef-f612-486c-803f-05d7d20c0244.png)
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151367325-4d5eacef-f612-486c-803f-05d7d20c0244.png">
 
 
 - Raster calculator: multiply the impact factor map with the exposure map
