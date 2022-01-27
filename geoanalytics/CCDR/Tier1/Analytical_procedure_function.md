@@ -92,7 +92,7 @@ The output is exported in form of tables, statistics, charts (excel format) and 
   - RPi is multiplied as mask with the population layer -> RPi_pop
   - Perform zonal statistic (SUM) for each ADM2 unit over RPi_pop -> table (ADM2_NAME;RPi_pop)
 
-- END LOOP; all RPs combined -> table [ADM2;RP10i;RP100i;RP1000i]
+- END LOOP; all RPs combined -> table [ADM2;RP10i_pop;RP100i_pop;RP1000i_pop]
 
 - Multiply RPi by RPp = (1-EXP(-1/RP)) -> table [ADM2;RP10_EAI;RP100_EAI;RP1000_EAI]
 
