@@ -84,7 +84,7 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
     
-- Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI for the same ADM2 and ADM1 code.
+- Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
 
 
 -------------------------------
