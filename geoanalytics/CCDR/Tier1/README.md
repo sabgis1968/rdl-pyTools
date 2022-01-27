@@ -17,7 +17,8 @@ FUTURE RISK:
 
 ### DATA MANAGEMENT
 
-- Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc). In this example, we use FATHOM river flood data (light blue) and population data (green to purple).
+- Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc).
+  In this example, we use FATHOM river flood data (light blue) and WorldPop2020-constrained-US_adjusted population data (green to purple).
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151356823-3687e507-1408-411b-ae8a-2b6c5a1259b3.png">
 
@@ -39,7 +40,7 @@ FUTURE RISK:
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png">
 
-  The resulting impact factor layers has values ranging 0-1.
+  The resulting impact factor layers RPi has values ranging 0-1.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
 
@@ -47,7 +48,7 @@ FUTURE RISK:
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151382232-4a48272a-6615-4a75-96d8-405c5d4d14e1.png">
 
-  The resulting layer represent the share of people impacted under RP10.
+  The resulting layer RPi_Pop represent the share of people impacted under RP10.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151381319-6a9b3fe9-f7f2-4dcd-b497-91bfcaac1c03.png">
 
@@ -59,10 +60,19 @@ FUTURE RISK:
   
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
 
-If the hazard is represented by **one layer**, it is assumed to represent the annual impact.
+  In order to express the value as % of total, we need the total population for each ADM3 unit.
+  
+- Zonal statistic: select "sum" criteria on the Population layer of choice.
 
-Otherwise, this procedure is repeated for **each RP layer**, and the Expected Annua Impact is computed in the following steps.
+If the hazard is represented by **one layer**, it is assumed to represent the Expected Annual Impact (EAI).
+
+Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is computed as described in the following steps.
 
 - Once reapeted over all RP layers, the ADM3 layer used to perform zonal statistic will have all the required information to calculate EAI.
+
+- The impact for each column is multiplied by the year frequency of the return period (RPf), calculated as RPf = 1/RP or, in the case where the set includes RP 1 year, as:
+    RPf = 1 - EXP(-1/RP)
+    
+- 
 
 ### USING IMPACT CATEGORIES CLASSIFICATION
