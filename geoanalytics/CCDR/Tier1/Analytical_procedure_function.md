@@ -82,8 +82,6 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 - Load hazard data from drive (for prototype). Most hazard data consist of 3 raster layers, each representing one event frequency scenario (return period).
 
-- Perform zonal statistic of Tot_Pop using ADM2 -> ADM2_Pop
-
 - Plot ADM and Pop data as map [if easy]
 
 ## DATA PROCESSING
@@ -99,6 +97,8 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 - Multiply RPi by RPp = (1-EXP(-1/RP)) -> table [ADM2;RP10_EAI;RP100_EAI;RP1000_EAI]
 
 - Sum all RPi_EAI columns for each ADM2: table [ADM2;Pop_EAI]
+
+- Perform zonal statistic of Tot_Pop using ADM2 -> ADM2_Pop
 
 - Calculate Pop_EAI% = Pop_EAI/ADM2_Pop
 
