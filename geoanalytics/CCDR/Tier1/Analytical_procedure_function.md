@@ -98,9 +98,9 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 - Sum all RPi_EAI columns for each ADM2: table [ADM2;Pop_EAI]
 
-- Perform zonal statistic of Tot_Pop using ADM2 -> ADM2_Pop
+- Perform zonal statistic of Tot_Pop using ADM2 -> [ADM2;ADM2_Pop;Pop_EAI]
 
-- Calculate Pop_EAI% = Pop_EAI/ADM2_Pop
+- Calculate Pop_EAI% = Pop_EAI/ADM2_Pop -> [ADM2;ADM2_Pop;Pop_EAI;Pop_EAI%]
 
 - Aggregate at ADM1 level according to criteria (Max or Mean)
 
