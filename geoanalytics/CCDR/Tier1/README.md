@@ -11,6 +11,8 @@ BASELINE RISK:
 FUTURE RISK:
 - Analytical_procedure_projections.md : collect climate indices anomalies and evaluate trend
 
+--------------------------------------
 
+## EXAMPLE BASELINE RISK OUTPUT
 
 
