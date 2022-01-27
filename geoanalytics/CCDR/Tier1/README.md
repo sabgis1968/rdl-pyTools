@@ -17,7 +17,7 @@ FUTURE RISK:
 
 ### DATA MANAGEMENT
 
-- Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc). In this example, we use FATHOM river flood data (light blue) and population data (blue to red).
+- Load map data: ADM units (3 layers), hazard (one or as many layers as RP scenarios) and exposure (population map, land cover, etc). In this example, we use FATHOM river flood data (light blue) and population data (green to purple).
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151356823-3687e507-1408-411b-ae8a-2b6c5a1259b3.png">
 
@@ -31,25 +31,35 @@ FUTURE RISK:
 
 
 <table><tr><td>Original data:</td><td>Threshold applied:</td></tr>
-<tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151364463-26343f61-a4ab-4a4e-9c53-7a14693da3a4.png"></td>
-<td><img width=70% src="https://user-images.githubusercontent.com/44863827/151364627-e57fca34-83af-4738-a3a4-0238a67919e1.png"></td></tr></table>
+<tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381859-c0b1c778-dd2a-455b-ad36-6077398bd037.png"></td>
+<td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381718-74f346ea-8e17-41ae-a055-d683c9e4403e.png"></td></tr></table>
+
+![immagine](https://user-images.githubusercontent.com/
 
 Note: this computation may take between 1-2 min.
 
 ### USING A IMPACT CURVE / FUNCTION
 
-- Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map. In this example, the average flood damage curve for Asia is used, where x is the hazard metric (water depth): y= 0.00723*x^3 - 0.1*x^2 + 0.506*x
+- Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map. In this example, the average flood damage curve for Asia is used, where x is the hazard metric (water depth): y= 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png">
 
-Note: this computation may take between 1-2 min. The resulting layers has values ranging 0-1.
+  The resulting impact factor layers has values ranging 0-1.
+  Note: this computation may take between 1-2 min. 
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151375234-9cbb9995-eb3a-4888-9ac7-3d549bf23cf3.png">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
 
 - Raster calculator: multiply the impact factor map with the exposure map
 
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151382232-4a48272a-6615-4a75-96d8-405c5d4d14e1.png">
 
+  The resulting layer represent the share of people impacted under RP10.
 
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381319-6a9b3fe9-f7f2-4dcd-b497-91bfcaac1c03.png">
+
+- Zonal statistic: sum up impacted population at ADM3 level.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151382721-2764d686-69df-4584-9fcd-2fc2f23ea120.png">
 
 
 ### USING IMPACT CATEGORIES CLASSIFICATION
