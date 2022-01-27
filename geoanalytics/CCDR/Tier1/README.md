@@ -75,7 +75,7 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 - Create a new column and calculate the percentage of expected annually impacted people over total population.
 
 - Create sum columns for ADM2 and ADM1.
-- 
+
 - Plot results.
 
 -------------------------------
