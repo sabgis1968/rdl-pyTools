@@ -83,28 +83,45 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 ### OPTION 2 - USING IMPACT CATEGORIES CLASSIFICATION
 
-In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude. For this example, we use Extreme heat.
+In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude. This is the case when no impact function is available for the category at risk, but a classification of impact by hazard thresholds is available. In this example, starting from the thresholded layer, we split the hazard intensity (water depth, as in previouse example) into 6 classes, each representing an interval of 0.5 m.
 
-- Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact classes.
-  In this example, the classification of heat stress (UTCI °C) is used.
+Water depth classes:
+| min | Max | 
+|-----|---|
+| 0.5 | 1 |
+| 1 | 1.5 |
+| 1.5 | 2 |
+| 2 | 2.5 |
+| 2.5 | 3 |
+| 3 | 6 |
 
-  <img width=50% src="">
+- Raster calculator: split the layer (one layer or multiple RP) into multiple impact classes. Repeat the changing the interval values for each class. 
 
-  The resulting impact factor layers RPi has values ranging 0-1.
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151589348-9d4e6227-dd79-4dfb-b463-56bea9bea467.png">
 
-  <img width=50% src="">
+  The outputs are 6 raster files, one for each hazard class, as a binary mask. These can combined into one multi-band file.
+  
+- Merge tool: select the 6 layers and keep default options; select "High" compression.
 
-- Raster calculator: multiply the impact factor map with the exposure map
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151591267-4b7706e5-1d12-4bca-a4bf-2163f7f7572e.png">
 
-  <img width=50% src="">
+  Resulting multi-band file (each band plotted separately):
+  
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151594139-4583cdc4-1bc0-4961-a860-dbc4cb826366.png">
 
-  The resulting layer RPi_Pop represent the share of people impacted under RP10.
+- Raster calculator: multiply each band from the multi-band file with the population map.
 
-  <img width=50% src="">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151592373-e01086a2-e9fb-4f50-9f37-fd9dfb029f51.png">
 
-- Zonal statistic: select "sum" criteria to aggregate impacted population at ADM3 level.
+  The outputs are 6 raster files, one for each hazard class, as number of exposed population. These can combined into one multi-band file (class_population), as shown before.
+  Resulting multi-band file (each band plotted separately) in orange-red colors:
 
-  <img width=50% src="">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151594269-268fbf44-882d-46a1-a610-65d5abca12af.png">
+
+- Zonal statistic: run as "batch". Select the 6 bands of the multi-band class_population layer, and select only the "sum" criteria to aggregate impacted population at ADM3 level.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151595290-3951d11e-85dc-4d7b-af70-9c8741c651d3.png">
+
   
   A new column "RP10_pop_sum" is added to ADM3 layer: plot it to desired simbology.
   
