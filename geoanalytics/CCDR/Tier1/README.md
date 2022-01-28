@@ -41,7 +41,8 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 In this scenario, a mathematical (quantitative) relationship is available to link physical hazard intensity and impact magnitude.
 
 - Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map.
-  In this example, the average flood damage curve for Asia is used, where x is the hazard metric (water depth): y= 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x
+  In this example, the average flood damage curve for Asia is used to aproximate an impact on population, although being developed for structural asset.
+  A polynomial function is fitted to the curve (R2= 0.99), where x is the hazard metric (water depth): y= 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x
   
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151544290-1306bda1-30a4-4729-9e4d-c025cf4f6f2e.png">
   
