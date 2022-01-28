@@ -97,21 +97,21 @@ Water depth classes:
 
 - Raster calculator: split the layer (one layer or multiple RP) into multiple impact classes. Repeat the changing the interval values for each class. 
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151589348-9d4e6227-dd79-4dfb-b463-56bea9bea467.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/151589348-9d4e6227-dd79-4dfb-b463-56bea9bea467.png">
 
   The outputs are 6 raster files, one for each hazard class, as a binary mask. These can combined into one multi-band file.
   
 - Merge tool: select the 6 layers and keep default options; select "High" compression.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151591267-4b7706e5-1d12-4bca-a4bf-2163f7f7572e.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/151591267-4b7706e5-1d12-4bca-a4bf-2163f7f7572e.png">
 
   Resulting multi-band file (each band plotted separately):
   
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151594139-4583cdc4-1bc0-4961-a860-dbc4cb826366.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/151594139-4583cdc4-1bc0-4961-a860-dbc4cb826366.png">
 
 - Raster calculator: multiply each band from the multi-band file with the population map.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151592373-e01086a2-e9fb-4f50-9f37-fd9dfb029f51.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/151592373-e01086a2-e9fb-4f50-9f37-fd9dfb029f51.png">
 
   The outputs are 6 raster files, one for each hazard class, as number of exposed population. These can combined into one multi-band file (class_population), as shown before.
   Resulting multi-band file (each band plotted separately) in orange-red colors:
