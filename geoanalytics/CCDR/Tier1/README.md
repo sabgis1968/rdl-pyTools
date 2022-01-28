@@ -40,29 +40,22 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 
 In this scenario, a mathematical (quantitative) relationship is available to link physical hazard intensity and impact magnitude.
 
-- Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map. In this example, the average flood damage curve for Asia is used, where x is the hazard metric (water depth): y= 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x
-
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png">
-
+- Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map.
+  In this example, the average flood damage curve for Asia is used, where x is the hazard metric (water depth): y= 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x
+  
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151544290-1306bda1-30a4-4729-9e4d-c025cf4f6f2e.png">
+  
   The resulting impact factor layers RPi has values ranging 0-1.
-
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
-
-- Raster calculator: multiply the impact factor map with the exposure map
-
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151382232-4a48272a-6615-4a75-96d8-405c5d4d14e1.png">
-
-  The resulting layer RPi_Pop represent the share of people impacted under RP10.
-
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381319-6a9b3fe9-f7f2-4dcd-b497-91bfcaac1c03.png">
-
-- Zonal statistic: select "sum" criteria to aggregate impacted population at ADM3 level.
-
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151384000-0a71e054-49a8-414b-bf3e-77432b135543.png">
   
-  A new column "RP10_pop_sum" is added to ADM3 layer: plot it to desired simbology.
-  
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
+  <img width=37% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
+
+- Raster calculator: multiply the impact factor map with the exposure map. The resulting layer RPi_Pop represent the share of people impacted under RP10.
+
+  <img width=37% src="https://user-images.githubusercontent.com/44863827/151382232-4a48272a-6615-4a75-96d8-405c5d4d14e1.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151381319-6a9b3fe9-f7f2-4dcd-b497-91bfcaac1c03.png">
+
+- Zonal statistic: select "sum" criteria to aggregate impacted population at ADM3 level. A new column "RP10_pop_sum" is added to ADM3 layer: plot it to desired simbology.
+
+  <img width=35% src="https://user-images.githubusercontent.com/44863827/151384000-0a71e054-49a8-414b-bf3e-77432b135543.png">  <img width=45% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
 
   In order to express the value as % of total, we need the total population for each ADM3 unit.
   
@@ -82,9 +75,7 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 - Plot results.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png">
-
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
     
 - Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
 
@@ -92,32 +83,32 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 ### OPTION 2 - USING IMPACT CATEGORIES CLASSIFICATION
 
-In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude.
+In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude. For this example, we use Extreme heat.
 
 - Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact classes.
   In this example, the classification of heat stress (UTCI °C) is used.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png">
+  <img width=50% src="">
 
   The resulting impact factor layers RPi has values ranging 0-1.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
+  <img width=50% src="">
 
 - Raster calculator: multiply the impact factor map with the exposure map
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151382232-4a48272a-6615-4a75-96d8-405c5d4d14e1.png">
+  <img width=50% src="">
 
   The resulting layer RPi_Pop represent the share of people impacted under RP10.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381319-6a9b3fe9-f7f2-4dcd-b497-91bfcaac1c03.png">
+  <img width=50% src="">
 
 - Zonal statistic: select "sum" criteria to aggregate impacted population at ADM3 level.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151384000-0a71e054-49a8-414b-bf3e-77432b135543.png">
+  <img width=50% src="">
   
   A new column "RP10_pop_sum" is added to ADM3 layer: plot it to desired simbology.
   
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
+  <img width=50% src="">
 
   In order to express the value as % of total, we need the total population for each ADM3 unit.
   
@@ -131,15 +122,15 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
   The impact for each column is multiplied by the year frequency of the return period (RPf), calculated as RPf = 1/RP or, in the case where the set includes RP 1 year, as:
   RPf = 1 - EXP(-1/RP). Then, the column are summed up to a total, representing EAI.
     
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151416889-8adafa0c-584b-4505-8185-6ee46c7f1bfe.png">    
+  <img width=50% src="">    
 
 - Create a new column and calculate the percentage of expected annually impacted people over total population.
 
 - Plot results.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png">
+  <img width=50% src="">
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
+  <img width=50% src="">
     
 - Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
 
