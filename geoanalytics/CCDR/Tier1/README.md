@@ -107,7 +107,7 @@ Water depth classes:
 
   Resulting multi-band file (each band plotted separately):
   
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/151594139-4583cdc4-1bc0-4961-a860-dbc4cb826366.png">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151594139-4583cdc4-1bc0-4961-a860-dbc4cb826366.png">
 
 - Raster calculator: multiply each band from the multi-band file with the population map.
 
