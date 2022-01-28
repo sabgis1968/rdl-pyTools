@@ -36,7 +36,9 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 <tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381859-c0b1c778-dd2a-455b-ad36-6077398bd037.png"></td>
 <td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381718-74f346ea-8e17-41ae-a055-d683c9e4403e.png"></td></tr></table>
 
-### USING A IMPACT CURVE / FUNCTION
+### OPTION 1 - USING A IMPACT CURVE / FUNCTION
+
+In this scenario, a mathematical (quantitative) relationship is available to link physical hazard intensity and impact magnitude.
 
 - Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map. In this example, the average flood damage curve for Asia is used, where x is the hazard metric (water depth): y= 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x
 
@@ -86,7 +88,58 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
     
 - Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
 
-
 -------------------------------
 
-### USING IMPACT CATEGORIES CLASSIFICATION
+### OPTION 2 - USING IMPACT CATEGORIES CLASSIFICATION
+
+In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude.
+
+- Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact classes.
+  In this example, the classification of heat stress (UTCI °C) is used.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png">
+
+  The resulting impact factor layers RPi has values ranging 0-1.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
+
+- Raster calculator: multiply the impact factor map with the exposure map
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151382232-4a48272a-6615-4a75-96d8-405c5d4d14e1.png">
+
+  The resulting layer RPi_Pop represent the share of people impacted under RP10.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151381319-6a9b3fe9-f7f2-4dcd-b497-91bfcaac1c03.png">
+
+- Zonal statistic: select "sum" criteria to aggregate impacted population at ADM3 level.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151384000-0a71e054-49a8-414b-bf3e-77432b135543.png">
+  
+  A new column "RP10_pop_sum" is added to ADM3 layer: plot it to desired simbology.
+  
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151402320-3ed9a157-59cd-4a5d-8209-312e9aaf0b7c.png">
+
+  In order to express the value as % of total, we need the total population for each ADM3 unit.
+  
+- Zonal statistic: select "sum" criteria on the Population layer of choice.
+
+If the hazard is represented by **one layer**, it is assumed to represent the Expected Annual Impact (EAI).
+
+Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is computed as described in the following steps.
+
+- Once reapeted over all RP layers, the ADM3 layer used to perform zonal statistic will include all the required information to calculate EAI and EAI%.
+  The impact for each column is multiplied by the year frequency of the return period (RPf), calculated as RPf = 1/RP or, in the case where the set includes RP 1 year, as:
+  RPf = 1 - EXP(-1/RP). Then, the column are summed up to a total, representing EAI.
+    
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151416889-8adafa0c-584b-4505-8185-6ee46c7f1bfe.png">    
+
+- Create a new column and calculate the percentage of expected annually impacted people over total population.
+
+- Plot results.
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png">
+
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
+    
+- Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
+
