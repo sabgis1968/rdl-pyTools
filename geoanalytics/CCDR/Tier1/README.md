@@ -73,7 +73,7 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 - Create a new column and calculate the percentage of expected annually impacted people over total population.
 
-- Plot results.
+- Plot results: absolute numbers and percentage over ADM3 total population.
 
   <img width=40% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
     
