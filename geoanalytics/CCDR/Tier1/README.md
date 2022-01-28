@@ -122,32 +122,9 @@ Water depth classes:
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151595290-3951d11e-85dc-4d7b-af70-9c8741c651d3.png">
 
+  Six columns [c1_sum to c6_sum] are added to ADM3 layer. It can be plotted to represent the number of people wihith each hazard class; or it can be exported as table for further steps of the analytics (e..g apply desired functions or parameters to each class). You can do that by either 1) exporting the ADM3 layer as csv; or 2) selecting the whole attribute table and selecting the "copy" button on the top (ctrl+C does not work!). Then paste into excel.
   
-  A new column "RP10_pop_sum" is added to ADM3 layer: plot it to desired simbology.
-  
-  <img width=50% src="">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151596863-ec6d47cd-b2c7-4511-8ef3-d5275f01ea46.png">
 
-  In order to express the value as % of total, we need the total population for each ADM3 unit.
-  
-- Zonal statistic: select "sum" criteria on the Population layer of choice.
-
-If the hazard is represented by **one layer**, it is assumed to represent the Expected Annual Impact (EAI).
-
-Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is computed as described in the following steps.
-
-- Once reapeted over all RP layers, the ADM3 layer used to perform zonal statistic will include all the required information to calculate EAI and EAI%.
-  The impact for each column is multiplied by the year frequency of the return period (RPf), calculated as RPf = 1/RP or, in the case where the set includes RP 1 year, as:
-  RPf = 1 - EXP(-1/RP). Then, the column are summed up to a total, representing EAI.
-    
-  <img width=50% src="">    
-
-- Create a new column and calculate the percentage of expected annually impacted people over total population.
-
-- Plot results.
-
-  <img width=50% src="">
-
-  <img width=50% src="">
-    
-- Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
+  In order to express the value as % of total, the steps are the same as explained in the Option 1 example: extract total population using zonal statistic, and export it as table.
 
