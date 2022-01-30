@@ -28,7 +28,7 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151356576-7f56d2a6-4314-4bcb-9727-377bd032ac54.png">
 
-- Apply min and max thresholds for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards, and values > 6 m as likely part of a river body.
+- Apply min and max thresholds for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards, and values > 6 m as likely part of a river body. Repeat for multiple RPs.
 
     <img width=50% src="https://user-images.githubusercontent.com/44863827/151363110-aef5a83b-d43b-44be-8d81-964133e210e4.png">
 
