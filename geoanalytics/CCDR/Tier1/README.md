@@ -28,7 +28,9 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151356576-7f56d2a6-4314-4bcb-9727-377bd032ac54.png">
 
-- Apply min threshold for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards. Repeat for multiple RPs.
+- Apply min threshold for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards, and values > 10 m as part of the water body. Repeat this step for multiple RPs.
+
+https://github.com/GFDRR/rdl-pyTools/blob/main/geoanalytics/CCDR/Tier1/Analytical_procedure_function.md
 
   <img width=40% src="https://user-images.githubusercontent.com/44863827/151788895-9185c774-b433-4fad-ab1d-0746a107e003.png">
 
