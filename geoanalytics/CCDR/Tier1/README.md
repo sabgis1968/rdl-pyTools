@@ -30,11 +30,7 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 
 - Apply min threshold for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards, and values > 10 m as part of the water body. Repeat this step for multiple RPs.
 
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/151795968-c8a4a86b-459d-4f55-aafa-713504296483.png">
-
-<table><tr><td>Original data:</td><td>Threshold applied:</td></tr>
-<tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381859-c0b1c778-dd2a-455b-ad36-6077398bd037.png"></td>
-<td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381718-74f346ea-8e17-41ae-a055-d683c9e4403e.png"></td></tr></table>
+  <img width=60% src="https://user-images.githubusercontent.com/44863827/151812298-25d14746-7d79-4d6e-8b67-3751a29233db.png">
 
 ### OPTION 1 - USING A IMPACT CURVE / FUNCTION
 
