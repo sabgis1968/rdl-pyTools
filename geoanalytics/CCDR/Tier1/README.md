@@ -73,7 +73,7 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 - Plot results: absolute numbers and percentage over ADM3 total population.
 
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/151826096-43510935-efb7-40c4-a2af-82f7c4c29564.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151825526-14ba5f89-725d-4ee9-9943-f9bc7a91e225.png">
+  <img width=60% src="https://user-images.githubusercontent.com/44863827/151826096-43510935-efb7-40c4-a2af-82f7c4c29564.png"> <img width=60% src="https://user-images.githubusercontent.com/44863827/151825526-14ba5f89-725d-4ee9-9943-f9bc7a91e225.png">
  
 - Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
 
