@@ -43,13 +43,13 @@ In this scenario, a mathematical (quantitative) relationship is available to lin
 - Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map.
   In this example, the average flood damage curve for Asia is used to aproximate an impact on population, although being developed for structural asset.
   A polynomial function is fitted to the curve (R2= 0.99), where x is the hazard metric (water depth); the max damage is set to 1:
-  y= min(1; 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x)
+  y= MIN(1, 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x)
   
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151544290-1306bda1-30a4-4729-9e4d-c025cf4f6f2e.png">
   
   The resulting impact factor layers RPi has values ranging 0-1.
   
-  <img width=37% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
+  <img width=37% src="https://user-images.githubusercontent.com/44863827/151798346-121dae76-1004-468d-9ec2-8f89d056ceed.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
 
 - Raster calculator: multiply the impact factor map with the exposure map. The resulting layer RPi_Pop represent the share of people impacted under RP10.
 
