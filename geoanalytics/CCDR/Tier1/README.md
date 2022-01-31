@@ -28,9 +28,9 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151356576-7f56d2a6-4314-4bcb-9727-377bd032ac54.png">
 
-- Apply min and max thresholds for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards, and values > 6 m as likely part of a river body. Repeat for multiple RPs.
+- Apply min threshold for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards. Repeat for multiple RPs.
 
-    <img width=50% src="https://user-images.githubusercontent.com/44863827/151363110-aef5a83b-d43b-44be-8d81-964133e210e4.png">
+  <img width=50% src="https://user-images.githubusercontent.com/44863827/151788895-9185c774-b433-4fad-ab1d-0746a107e003.png">
 
 <table><tr><td>Original data:</td><td>Threshold applied:</td></tr>
 <tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381859-c0b1c778-dd2a-455b-ad36-6077398bd037.png"></td>
@@ -42,7 +42,8 @@ In this scenario, a mathematical (quantitative) relationship is available to lin
 
 - Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map.
   In this example, the average flood damage curve for Asia is used to aproximate an impact on population, although being developed for structural asset.
-  A polynomial function is fitted to the curve (R2= 0.99), where x is the hazard metric (water depth): y= 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x
+  A polynomial function is fitted to the curve (R2= 0.99), where x is the hazard metric (water depth); the max damage is set to 1:
+  y= min(1; 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x)
   
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151544290-1306bda1-30a4-4729-9e4d-c025cf4f6f2e.png">
   
