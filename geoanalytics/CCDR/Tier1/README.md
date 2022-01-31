@@ -30,7 +30,7 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 
 - Apply min threshold for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards. Repeat for multiple RPs.
 
-  <img width=50% src="https://user-images.githubusercontent.com/44863827/151788895-9185c774-b433-4fad-ab1d-0746a107e003.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/151788895-9185c774-b433-4fad-ab1d-0746a107e003.png">
 
 <table><tr><td>Original data:</td><td>Threshold applied:</td></tr>
 <tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381859-c0b1c778-dd2a-455b-ad36-6077398bd037.png"></td>
