@@ -85,7 +85,7 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 ### OPTION 2 - USING IMPACT CATEGORIES CLASSIFICATION
 
-In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude. This is the case when no impact function is available for the category at risk, but a classification of impact by hazard thresholds is possible. Starting from the thresholded layer, we split the hazard intensity (water depth, as in previouse example) into 6 classes, each representing an interval of 0.5 m. Then, we extract the total population located within each hazard class for each ADM3 unit into an excel table for further analytics to be applied.
+In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude. This is the case when no impact function is available for the category at risk, but a classification of impact by hazard thresholds is possible. Starting from the thresholded layer, we split the hazard intensity (water depth, as in previouse example) into 6 classes, each representing an interval of 0.5 m - except the last one, the includes all values > MAX damage ratio. Then, we extract the total population located within each hazard class for each ADM3 unit into an excel table for further analytics to be applied.
 
 Water depth classes:
 | min | Max | 
@@ -95,7 +95,7 @@ Water depth classes:
 | 1.5 | 2 |
 | 2 | 2.5 |
 | 2.5 | 3 |
-| 3 | 6 |
+| 3 | 10 |
 
 - Raster calculator: split the layer (one layer or multiple RP) into multiple impact classes. Repeat the changing the interval values for each class. 
 
