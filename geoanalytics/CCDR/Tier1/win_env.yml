@@ -43,6 +43,7 @@ https://conda.anaconda.org/conda-forge/win-64/m2w64-gcc-libgfortran-5.3.0-6.tar.
 https://conda.anaconda.org/conda-forge/win-64/openssl-1.1.1l-h8ffe710_0.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/pcre-8.45-h0e60522_0.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/pixman-0.40.0-h8ffe710_0.tar.bz2
+https://conda.anaconda.org/conda-forge/win-64/py-spy-0.3.11-h9c7a3cb_1.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/sqlite-3.37.0-h8ffe710_0.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/tbb-2021.5.0-h2d74725_0.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/tk-8.6.11-h8ffe710_1.tar.bz2
@@ -80,6 +81,7 @@ https://conda.anaconda.org/conda-forge/win-64/hdf4-4.2.15-h0e5069d_3.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/idna-3.1-pyhd3deb0d_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/ipython_genutils-0.2.0-py_1.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/json5-0.9.5-pyh9f0ad1d_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/jupyterlab_widgets-1.0.2-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/libblas-3.9.0-12_win64_mkl.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/libglib-2.70.2-h3be07f2_1.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/libpng-1.6.37-h1d00b33_2.tar.bz2
@@ -233,4 +235,6 @@ https://conda.anaconda.org/conda-forge/noarch/rioxarray-0.9.1-pyhd8ed1ab_0.tar.b
 https://conda.anaconda.org/conda-forge/noarch/geopandas-0.10.2-pyhd8ed1ab_1.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/nbclassic-0.3.5-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/rasterstats-0.16.0-pyhd8ed1ab_0.tar.bz2
+https://conda.anaconda.org/conda-forge/win-64/widgetsnbextension-3.5.2-py310h5588dad_1.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/ipywidgets-7.6.5-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/jupyterlab-3.2.8-pyhd8ed1ab_0.tar.bz2
