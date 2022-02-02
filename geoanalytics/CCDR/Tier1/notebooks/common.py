@@ -28,7 +28,7 @@ import matplotlib.pyplot as plt
 
 # import widgets
 import ipywidgets as widgets
-from ipywidgets import interact, interact_manual
+from ipywidgets import interact, interact_manual, Layout, Box, HBox, VBox
 import IPython.display
 from IPython.display import display, clear_output
 
