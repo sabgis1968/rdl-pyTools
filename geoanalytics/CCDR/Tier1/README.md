@@ -28,13 +28,9 @@ Estimated time to complete the assessment on one country: less than 2 hours.
 
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151356576-7f56d2a6-4314-4bcb-9727-377bd032ac54.png">
 
-- Apply min threshold for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards. Repeat for multiple RPs.
+- Apply min threshold for hazard, if required. In the example, we consider values < 0.5 m as non-impacting due to defence standards, and values > 10 m as part of the water body. Repeat this step for multiple RPs.
 
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/151788895-9185c774-b433-4fad-ab1d-0746a107e003.png">
-
-<table><tr><td>Original data:</td><td>Threshold applied:</td></tr>
-<tr><td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381859-c0b1c778-dd2a-455b-ad36-6077398bd037.png"></td>
-<td><img width=70% src="https://user-images.githubusercontent.com/44863827/151381718-74f346ea-8e17-41ae-a055-d683c9e4403e.png"></td></tr></table>
+  <img width=60% src="https://user-images.githubusercontent.com/44863827/151812298-25d14746-7d79-4d6e-8b67-3751a29233db.png">
 
 ### OPTION 1 - USING A IMPACT CURVE / FUNCTION
 
@@ -43,13 +39,13 @@ In this scenario, a mathematical (quantitative) relationship is available to lin
 - Raster calculator: tranlate the hazard map (one layer or multiple RP) into impact factor map.
   In this example, the average flood damage curve for Asia is used to aproximate an impact on population, although being developed for structural asset.
   A polynomial function is fitted to the curve (R2= 0.99), where x is the hazard metric (water depth); the max damage is set to 1:
-  y= min(1; 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x)
+  y= MIN(1, 0.00723 \* x^3 - 0.1 \* x^2 + 0.506 \* x)
   
   <img width=50% src="https://user-images.githubusercontent.com/44863827/151544290-1306bda1-30a4-4729-9e4d-c025cf4f6f2e.png">
   
   The resulting impact factor layers RPi has values ranging 0-1.
   
-  <img width=37% src="https://user-images.githubusercontent.com/44863827/151374810-c7890f1e-8ced-4ecc-be6f-383ab6485bc9.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
+  <img width=37% src="https://user-images.githubusercontent.com/44863827/151798346-121dae76-1004-468d-9ec2-8f89d056ceed.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151381602-319c426f-273d-482c-ace2-059b6375b4b3.png">
 
 - Raster calculator: multiply the impact factor map with the exposure map. The resulting layer RPi_Pop represent the share of people impacted under RP10.
 
@@ -77,15 +73,15 @@ Otherwise, this procedure is repeated for **each RP layer**, and then the EAI is
 
 - Plot results: absolute numbers and percentage over ADM3 total population.
 
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/151421400-de7e2f9a-3e1a-4c83-8953-8e41b416067f.png"> <img width=40% src="https://user-images.githubusercontent.com/44863827/151421614-a28fb23b-cc31-41fd-82cd-3189c621231c.png">
-    
+  <img width=60% src="https://user-images.githubusercontent.com/44863827/151826096-43510935-efb7-40c4-a2af-82f7c4c29564.png"> <img width=60% src="https://user-images.githubusercontent.com/44863827/151825526-14ba5f89-725d-4ee9-9943-f9bc7a91e225.png">
+ 
 - Results can be furtherly aggregated for ADM2 and ADM1 levels by creating a new column ADM2_EAI ADM1_EAI and summing all EAI using ADM2_code and ADM1_code as index.
 
 -------------------------------
 
 ### OPTION 2 - USING IMPACT CATEGORIES CLASSIFICATION
 
-In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude. This is the case when no impact function is available for the category at risk, but a classification of impact by hazard thresholds is possible. Starting from the thresholded layer, we split the hazard intensity (water depth, as in previouse example) into 6 classes, each representing an interval of 0.5 m. Then, we extract the total population located within each hazard class for each ADM3 unit into an excel table for further analytics to be applied.
+In this scenario, the physical hazard intensity is ranked in qualitative classes of impact magnitude. This is the case when no impact function is available for the category at risk, but a classification of impact by hazard thresholds is possible. Starting from the thresholded layer, we split the hazard intensity (water depth, as in previouse example) into 6 classes, each representing an interval of 0.5 m - except the last one, the includes all values > MAX damage ratio. Then, we extract the total population located within each hazard class for each ADM3 unit into an excel table for further analytics to be applied.
 
 Water depth classes:
 | min | Max | 
@@ -95,7 +91,7 @@ Water depth classes:
 | 1.5 | 2 |
 | 2 | 2.5 |
 | 2.5 | 3 |
-| 3 | 6 |
+| 3 | 10 |
 
 - Raster calculator: split the layer (one layer or multiple RP) into multiple impact classes. Repeat the changing the interval values for each class. 
 
