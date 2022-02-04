@@ -33,10 +33,12 @@ import IPython.display
 from IPython.display import display, clear_output
 
 
-# Common directories
-DATA_DIR = "../data/"
-SAR_loc = "C:/development/CDCC-data/SAR/"
+# Load env vars from dotenv file
+from dotenv import dotenv_values
 
-# Make cache dir if needed
-CACHE_DIR = f"{DATA_DIR}cache/"
+config = dotenv_values(".env")
+DATA_DIR = config["DATA_DIR"]
+CACHE_DIR = config["CACHE_DIR"]
+
+# Ensure cache dir exist
 os.makedirs(CACHE_DIR, exist_ok=True)
