@@ -38,7 +38,9 @@ from dotenv import dotenv_values
 
 config = dotenv_values(".env")
 DATA_DIR = config["DATA_DIR"]
+OUTPUT_DIR = config["OUTPUT_DIR"]
 CACHE_DIR = config["CACHE_DIR"]
 
-# Ensure cache dir exist
+# Ensure output and cache dirs exist
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(CACHE_DIR, exist_ok=True)
