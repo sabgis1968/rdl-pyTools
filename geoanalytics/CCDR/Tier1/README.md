@@ -109,7 +109,7 @@ Water depth classes:
 
 - Raster calculator: multiply each band from the multi-band file with the population map.
 
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/151592373-e01086a2-e9fb-4f50-9f37-fd9dfb029f51.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/153635133-40167c5e-6e99-45a5-add7-8f116fe78512.png">
 
   The outputs are 6 raster files, one for each hazard class, as number of exposed population. These can combined into one multi-band file (class_population), as shown before.
   Resulting multi-band file (each band plotted separately) in orange-red colors:
