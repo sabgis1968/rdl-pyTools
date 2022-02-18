@@ -10,12 +10,14 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 # SCRIPT OVERVIEW
 
-- Script runs on one country at time to keep the calculation time manageable.
-- - User input is required to define country and settings.
-- Settings affect how the processing runs (criteria, thesholds).
+- Script runs on one country at time to keep the calculation time manageable
+- - User input is required to define country and settings
+- Settings affect how the processing runs (criteria, thesholds)
+- All RCP scenarios are considered and presented in the results: RCP 2.6, 4.5, 8.5
+- The estimate is provided for median, 10th-percentile and 90th percentile
 - The information is aggregated at ADM2 level
-- The table results are exported in excel format.
-- The vector rsults are exported in gpkg format.
+- The table results are exported in excel format
+- The vector rsults are exported in gpkg format
 
 
 # SCRIPT STRUCTURE
@@ -26,7 +28,7 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 - DATA MANAGEMENT: global datasets are loaded according to user input
 - DATA PROCESSING: datasets are processed according to settings
 - PREVIEW RESULTS: plot tables and maps
-- EXPORT RESULTS: results are exported as excel according to template
+- EXPORT RESULTS: results are exported as geopackage and csv according to templates
 
 # PRE-REQUISITES (OFFLINE)
 
@@ -41,42 +43,39 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 
 ## USER INPUT
 
+- Hazard of interest: Flood and Landslide, Tropical Cyclone, Coastal flood, Drought and Water Scarcity, Heat
 - Country of interest (1): Name or ISO code 
-- Time horizon: Historical, 2050, 2080 
-- RCP scenario: RCP 2.6, 4.5, 6.5, 8.5 
+- Time horizon: 2040, 2060, 2080, 2100
 
-## SETTINGS (DEFAULTS can be changed)
+## SETTINGS (DEFAULT can be changed)
 
-- Criteria for aggregation: a) MAX; b) Mean
-- Min Hazard threshold: data below this threshold are being ignored
-- Max Hazard threshod: data above this threshold are considered as the threshold value (max expected impact)
-
-## SUMMARY OUTPUT SETTINGS
-
-- Display input and settings:
-
-	- Country: Nepal (NPL)
-	- Exposure: Population
-	- Values aggregation criteria: Max
-
+- Criteria for value aggregation: a) MAX; b) Mean
 
 ------------------------------------------
 
-
 ## DATA MANAGEMENT
 
-- Load results from Baseline analysis
-- Creation of API request based on selected country and scenario options (period, RCP)
-- Harvest climate indices information as tables of SD
+- Creation of string request based on input (hazard, country and period)
+- String links to nc files hosted / downloaded from CCKP
 
 ## DATA PROCESSING - PROJECTIONS
 
-- Apply rule to change risk level based on SD
+- Run zonal statistic using ADM2 as zone and nc data as value based on input (country, horizon, RCP) and settings aggregation criteria
 
 ## PREVIEW RESULTS - PROJECTIONS
 
-- Plot indices tables/charts
+- Plot indices as map and as tables/charts
+  - On ADM2 map selection (mouse click), each indices is plotted as a one line chart that includes:
+    -  3 lines of different colors (green, yellow, orange) representing the median for each RCP
+    -  3 shade areas representing the related p10 and p90 for each RCP
+    -  X is period (as from input)
+    -  Y is intensity (depends on index selection)
+    -  Title specify aggregation criteria
+
+Similar to common RPC representation:
+
+<img width="500" src="https://user-images.githubusercontent.com/44863827/154677308-610702d4-1312-4ce5-b16c-e2b99e961c1e.png">
 
 ## EXPORT RESULTS - PROJECTIONS
 
-- Export tables and charts as excel
+- Export output as gpkg and csv
