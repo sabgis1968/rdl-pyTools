@@ -65,7 +65,7 @@ The output is:
 
 |          Hazard           |               Associated climate indices           |
 |---------------------------|----------------------------------------------------|
-|     River floods          |     Days with rainfall > 10 mm [days]              |
+| River floods / Landslides |     Days with rainfall > 10 mm [days]              |
 |                           |     Maximum 5-day precipitation [mm]               |
 |                           |     Very wet day precipitation [days/month]        |
 |     Wet landslides        |     Days with rainfall > 10 mm [days]              |
