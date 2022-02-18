@@ -1,23 +1,24 @@
 # OBJECTIVE
 
-The script performs collection of climate indices related to hydromet hazards.
-The spatial information is collected from Copernicus C3S.
+The script performs collection of climate indices related to hydrometeorological hazards.
+The spatial information is collected from [WB CCKP](https://climateknowledgeportal.worldbank.org/download-data).
 
-The climate component estimates the increase in the disaster risk score over the baseline by evaluating the anomaly (standard deviation) of hazard-related climate indices for the required future time horizon over the reference period.
+The climate component estimates the mean or max anomaly over the reference baseline for a selection of hazard-related climate indices for a specified time horizon under 3 RCPs (2.6, 4.5, 8.5).
 
-The output is exported in form of tables, statistics, charts (excel format) and maps (geopackage).
+The output is:
+- presented as map and dynamic chart at each model run
+- exported in form of tables, statistics, charts (excel format) and maps (geopackage) at each model run
 
 
 # SCRIPT OVERVIEW
 
-- Script runs on one country at time to keep the calculation time manageable
-- - User input is required to define country and settings
-- Settings affect how the processing runs (criteria, thesholds)
-- All RCP scenarios are considered and presented in the results: RCP 2.6, 4.5, 8.5
+- Script runs on one country at time and for a specific set of indices (depending on hazard selected) to keep the calculation time manageable
+- User input defines country and settings
+- Settings affect which input data is selected, how the processing runs (criteria), and how the results are presented
+- All RCP scenarios are always considered and presented in the results: RCP 2.6, 4.5, 8.5
 - The estimate is provided for median, 10th-percentile and 90th percentile
-- The information is aggregated at ADM2 level
-- The table results are exported in excel format
-- The vector rsults are exported in gpkg format
+- The information is aggregated at ADM2 level and presented dynamically
+- The results are exported as csv (table) and geopackage (vector)
 
 
 # SCRIPT STRUCTURE
@@ -28,7 +29,7 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 - DATA MANAGEMENT: global datasets are loaded according to user input
 - DATA PROCESSING: datasets are processed according to settings
 - PREVIEW RESULTS: plot tables and maps
-- EXPORT RESULTS: results are exported as geopackage and csv according to templates
+- EXPORT RESULTS: results are exported as gpkg and csv according to templates
 
 # PRE-REQUISITES (OFFLINE)
 
@@ -44,7 +45,7 @@ The output is exported in form of tables, statistics, charts (excel format) and 
 ## USER INPUT
 
 - Hazard of interest: Flood and Landslide, Tropical Cyclone, Coastal flood, Drought and Water Scarcity, Heat
-- Country of interest (1): Name or ISO code 
+- Country of interest (1): Name dropdown (link ISOa3 value) 
 - Time horizon: 2040, 2060, 2080, 2100
 
 ## SETTINGS (DEFAULT can be changed)
