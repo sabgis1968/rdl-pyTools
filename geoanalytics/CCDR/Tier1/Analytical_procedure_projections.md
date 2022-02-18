@@ -63,6 +63,21 @@ The output is:
 
 - Run zonal statistic using ADM2 as zone and nc data as value based on input (country, horizon, RCP) and settings aggregation criteria
 
+|          Hazard           |               Associated climate indices           |
+|---------------------------|----------------------------------------------------|
+|     River floods          |     Days with rainfall > 10 mm [days]              |
+|                           |     Maximum 5-day precipitation [mm]               |
+|                           |     Very wet day precipitation [days/month]        |
+|     Wet landslides        |     Days with rainfall > 10 mm [days]              |
+|     Coastal floods        |     Mean Sea Level Rise [m]                        |
+|     Tropical cyclone      |     Number of days with strong winds [days]        |
+|                           |     Daily maximum 10-m wind speed [m/s]            |
+|     Agricultural drought  |     Standard Precipitation-ET Index (SPEI) [-]     |
+|     Heat stress           |     Heat index [°C]                                |
+|     Wildfire?             |     Standard Precipitation-ET Index (SPEI) [-]     |
+|                           |     Heat index                                     |
+
+
 ## PREVIEW RESULTS - PROJECTIONS
 
 - Plot indices as map and as tables/charts
