@@ -95,7 +95,7 @@ Water depth classes:
 
 - Raster calculator: split the layer (one layer or multiple RP) into multiple impact classes. Repeat the changing the interval values for each class. 
 
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/151589348-9d4e6227-dd79-4dfb-b463-56bea9bea467.png">
+  <img width=40% src="https://user-images.githubusercontent.com/44863827/153635133-40167c5e-6e99-45a5-add7-8f116fe78512.png">
 
   The outputs are 6 raster files, one for each hazard class, as a binary mask. These can combined into one multi-band file.
   
@@ -109,7 +109,7 @@ Water depth classes:
 
 - Raster calculator: multiply each band from the multi-band file with the population map.
 
-  <img width=40% src="https://user-images.githubusercontent.com/44863827/153635133-40167c5e-6e99-45a5-add7-8f116fe78512.png">
+  <img width=40% src=<"">
 
   The outputs are 6 raster files, one for each hazard class, as number of exposed population. These can combined into one multi-band file (class_population), as shown before.
   Resulting multi-band file (each band plotted separately) in orange-red colors:
