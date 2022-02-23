@@ -1,6 +1,6 @@
 # CCDR ANALYTICAL NOTEBOOKS - TIER 1
 
-## Multi-hazard risk evaluation based on global/regional datasets
+## Multi-hazard risk screening based on global/regional datasets
 
 Different workflows for different hazard and vulnerability (impact model) types:
 
