@@ -1,20 +1,21 @@
 # Required libraries
 import tempfile, os
+import warnings
+from collections import OrderedDict
+
+import requests
+import json
+
 
 import numpy as np
 import pandas as pd
 import geopandas as gpd
 from tqdm import tqdm
 
-import warnings
-
 import rasterio
 import xarray as xr
 import rioxarray as rxr
 from rasterstats import gen_zonal_stats, zonal_stats
-
-import requests
-import json
 
 import contextily as ctx
 # from contextily import Place
